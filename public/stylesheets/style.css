@@ -1,0 +1,73 @@
+body {
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  font-family: "Times New Roman", Times, serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#banner{
+  background: url("https://i.pinimg.com/originals/5c/18/f3/5c18f341a9d30427a2a964be96dac51d.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bg-image {
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+#aboutme{
+  /*background: url("https://i.pinimg.com/originals/5c/18/f3/5c18f341a9d30427a2a964be96dac51d.jpg");*/
+  background-color: #92a8d1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*height: 100vh;*/
+}
+
+#random{
+  /*background: url("https://i.pinimg.com/originals/5c/18/f3/5c18f341a9d30427a2a964be96dac51d.jpg");*/
+  background-color: #92a8d1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*height: 100vh;*/
+}
+
+.bg-food {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  z-index: 200;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+

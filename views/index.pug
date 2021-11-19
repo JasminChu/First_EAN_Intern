@@ -1,0 +1,76 @@
+extends layout
+
+block content
+
+    //setting background image
+    div#banner.jumbotron.backgroundImg
+        div.bg-text
+            h2 Define YourSelf
+            h1(style='font-size:50px') I am - Jasmin -
+            p And I&apos;m a Potato
+
+    h1 About Me (29/12/2020)
+    div#aboutme
+      p Hi! I am #{title2}
+      p Age: #{age}
+
+      p This is Array 1: #{array1}
+      p This is Array 2: #{array2}
+      h2 This is Final Result: #{array6}
+
+      p This is Array 1: #{array3}
+      p This is Array 1: #{array4}
+      h2 This is Final Result: #{array5}
+
+    // https://www.geeksforgeeks.org/how-to-push-elements-in-an-array-using-angularjs/
+    div#random(ng-app='app').container.text-center.my-3.bg-food
+      div(ng-controller='controller').p-3
+          h1 What To EAT? (30/12/2020)
+          h2
+              | Your Suggeation:
+              input(type='text' ng-model='newfood')
+              button(ng-click='push()')
+                  | Click to push
+          // You Answer:  "{{val}}"<br>
+          | Preferred Cuisine: {{arr}}
+          br
+          br
+          button(ng-click='random()')
+              | Random ING
+          p  Meal For Today: {{randomQuote}}
+
+
+      script.
+          var myApp = angular.module("app", []);
+          myApp.controller("controller", function ($scope) {
+              $scope.arr = ['KFC', 'PIZZA'];
+              $scope.newfood = '';
+
+              $scope.push = function () {
+                      if ($scope.newfood != '')
+                      {
+                          if ($scope.arr.includes($scope.newfood))
+                          {alert("Opps! Food Already Exists!");}
+                          else{$scope.arr.push($scope.newfood);}
+                      }
+                      else
+                      {
+                          alert("Food Input Cannot Be Empty!");
+                      }
+              };
+              $scope.random = function () {
+                  $scope.randomQuote = $scope.arr[Math.floor(Math.random() * $scope.arr.length)];
+                  // use _.sample (Loadash)
+                  // var randomElement = _.sample(arr);
+              };
+          });
+
+
+
+
+
+
+
+
+
+
